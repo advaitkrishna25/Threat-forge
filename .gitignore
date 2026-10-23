@@ -1,0 +1,135 @@
+# ==========================================
+# ThreatForge - Root Git Ignore
+# ==========================================
+
+# ------------------------------------------
+# Node / JavaScript / TypeScript Dependencies
+# ------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+
+# ------------------------------------------
+# Production Builds & Bundler Outputs
+# ------------------------------------------
+dist/
+dist-ssr/
+build/
+out/
+*.tsbuildinfo
+*.local
+
+# ------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------
+.env
+.env*.local
+*.env
+!.env.example
+!*.env.example
+
+# ------------------------------------------
+# Python & Testing Artifacts
+# ------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# ------------------------------------------
+# Machine Learning Models & Large Artifacts
+# (Files >100MB exceed GitHub's upload limits)
+# ------------------------------------------
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+malware_model.pkl
+
+# ------------------------------------------
+# Large Datasets & Raw Features
+# ------------------------------------------
+*.csv
+*.tsv
+*.parquet
+*.feather
+ember2017_test.csv
+features_25.csv
+training_data.csv
+
+# ------------------------------------------
+# Databases & SQLite Storage
+# ------------------------------------------
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+data/
+
+# ------------------------------------------
+# Temporary Files, Uploads & Malware Samples
+# ------------------------------------------
+uploads/
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ------------------------------------------
+# Logs
+# ------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------
+# Editor & IDE Settings
+# ------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+*.swp
+
+# ------------------------------------------
+# OS Metadata
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini

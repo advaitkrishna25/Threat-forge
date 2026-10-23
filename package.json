@@ -1,0 +1,12 @@
+{
+  "name": "threatforge-workspace",
+  "version": "1.0.0",
+  "description": "ThreatForge Static Malware Analyzer",
+  "scripts": {
+    "dev": "npm --prefix threatforge run dev",
+    "dev:ml": "npm --prefix threatforge run dev:ml",
+    "dev:server": "npm --prefix threatforge run dev:server",
+    "dev:client": "npm --prefix threatforge run dev:client",
+    "build": "npm --prefix threatforge run build"
+  }
+}

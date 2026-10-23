@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+/* ============================================================
+   THREATFORGE — GLOBAL THEME SYSTEM
+   Each [data-theme] redefines ALL CSS variables completely.
+   Smooth 300ms transitions on every color token.
+   ============================================================ */
+
+@layer base {
+  /* ─── Root: fallback / initial values ─── */
+  :root {
+    --brand-ink-black:     #001219;
+    --brand-dark-teal:     #005f73;
+    --brand-dark-cyan:     #0a9396;
+    --brand-pearl-aqua:    #94d2bd;
+    --brand-wheat:         #e9d8a6;
+    --brand-golden-orange: #ee9b00;
+    --brand-burnt-caramel: #ca6702;
+    --brand-rusty-spice:   #bb3e03;
+    --brand-oxidized-iron: #ae2012;
+    --brand-brown-red:     #9b2226;
+  }
+
+  /* ============================================================
+     THEME 1 — OCEAN FORGE (default dark)
+     Deep-ocean cyber · teal + aqua
+  ============================================================ */
+  [data-theme="ocean"] {
+    color-scheme: dark;
+
+    --bg-base:      #001219;
+    --bg-surface-1: #001e2c;
+    --bg-surface-2: #002840;
+    --bg-surface-3: #003452;
+
+    --border-theme:        rgba(148, 210, 189, 0.12);
+    --border-theme-strong: rgba(148, 210, 189, 0.28);
+
+    --text-primary:   #f0ead6;
+    --text-secondary: rgba(148, 210, 189, 0.80);
+    --text-muted:     rgba(148, 210, 189, 0.42);
+
+    --accent-primary:   #0a9396;
+    --accent-secondary: #94d2bd;
+    --accent-glow:      rgba(10, 147, 150, 0.40);
+    --accent-gradient:  linear-gradient(135deg, #0a9396, #94d2bd);
+
+    --verdict-benign:        #94d2bd;
+    --verdict-benign-bg:     rgba(148, 210, 189, 0.14);
+    --verdict-malicious:     #ff7b7b;
+    --verdict-malicious-bg:  rgba(155, 34, 38, 0.35);
+    --verdict-unknown:       #8fa8b5;
+    --verdict-unknown-bg:    rgba(0, 95, 115, 0.22);
+
+    --shadow-card: 0 4px 24px rgba(0, 18, 25, 0.7);
+    --shadow-glow: 0 0 40px rgba(10, 147, 150, 0.18);
+  }
+
+  /* ============================================================
+     THEME 2 — CRIMSON INTEL
+     Dark red · oxidized iron · firelight
+  ============================================================ */
+  [data-theme="crimson"] {
+    color-scheme: dark;
+
+    --bg-base:      #0f0005;
+    --bg-surface-1: #1a0008;
+    --bg-surface-2: #25000e;
+    --bg-surface-3: #320015;
+
+    --border-theme:        rgba(255, 110, 110, 0.12);
+    --border-theme-strong: rgba(255, 110, 110, 0.28);
+
+    --text-primary:   #fce8e8;
+    --text-secondary: rgba(255, 150, 140, 0.80);
+    --text-muted:     rgba(255, 150, 140, 0.42);
+
+    --accent-primary:   #ae2012;
+    --accent-secondary: #ee9b00;
+    --accent-glow:      rgba(174, 32, 18, 0.45);
+    --accent-gradient:  linear-gradient(135deg, #ae2012, #ee9b00);
+
+    --verdict-benign:        #f6a35a;
+    --verdict-benign-bg:     rgba(246, 163, 90, 0.14);
+    --verdict-malicious:     #ff4444;
+    --verdict-malicious-bg:  rgba(255, 68, 68, 0.30);
+    --verdict-unknown:       #9a7070;
+    --verdict-unknown-bg:    rgba(100, 40, 40, 0.30);
+
+    --shadow-card: 0 4px 24px rgba(15, 0, 5, 0.80);
+    --shadow-glow: 0 0 40px rgba(174, 32, 18, 0.22);
+  }
+
+  /* ============================================================
+     THEME 3 — VIOLET PHANTOM
+     Deep purple · violet · arcane glow
+  ============================================================ */
+  [data-theme="violet"] {
+    color-scheme: dark;
+
+    --bg-base:      #06040f;
+    --bg-surface-1: #0e0820;
+    --bg-surface-2: #150d2e;
+    --bg-surface-3: #1e1340;
+
+    --border-theme:        rgba(167, 139, 250, 0.14);
+    --border-theme-strong: rgba(167, 139, 250, 0.30);
+
+    --text-primary:   #ede9fe;
+    --text-secondary: rgba(167, 139, 250, 0.82);
+    --text-muted:     rgba(167, 139, 250, 0.44);
+
+    --accent-primary:   #7c3aed;
+    --accent-secondary: #a78bfa;
+    --accent-glow:      rgba(124, 58, 237, 0.45);
+    --accent-gradient:  linear-gradient(135deg, #7c3aed, #a78bfa);
+
+    --verdict-benign:        #a78bfa;
+    --verdict-benign-bg:     rgba(167, 139, 250, 0.15);
+    --verdict-malicious:     #f472b6;
+    --verdict-malicious-bg:  rgba(244, 114, 182, 0.22);
+    --verdict-unknown:       #7d6ba0;
+    --verdict-unknown-bg:    rgba(80, 60, 130, 0.25);
+
+    --shadow-card: 0 4px 24px rgba(6, 4, 15, 0.85);
+    --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.22);
+  }
+
+  /* ============================================================
+     THEME 4 — AMBER FOUNDRY
+     Deep amber · burnt gold · forge fire
+  ============================================================ */
+  [data-theme="amber"] {
+    color-scheme: dark;
+
+    --bg-base:      #0f0800;
+    --bg-surface-1: #1c1100;
+    --bg-surface-2: #261800;
+    --bg-surface-3: #342100;
+
+    --border-theme:        rgba(238, 155, 0, 0.14);
+    --border-theme-strong: rgba(238, 155, 0, 0.32);
+
+    --text-primary:   #fff4d6;
+    --text-secondary: rgba(238, 200, 100, 0.82);
+    --text-muted:     rgba(238, 200, 100, 0.44);
+
+    --accent-primary:   #ee9b00;
+    --accent-secondary: #f5c842;
+    --accent-glow:      rgba(238, 155, 0, 0.45);
+    --accent-gradient:  linear-gradient(135deg, #ca6702, #ee9b00);
+
+    --verdict-benign:        #f5c842;
+    --verdict-benign-bg:     rgba(245, 200, 66, 0.15);
+    --verdict-malicious:     #ff6b35;
+    --verdict-malicious-bg:  rgba(255, 107, 53, 0.22);
+    --verdict-unknown:       #8a7040;
+    --verdict-unknown-bg:    rgba(100, 80, 20, 0.28);
+
+    --shadow-card: 0 4px 24px rgba(15, 8, 0, 0.85);
+    --shadow-glow: 0 0 40px rgba(238, 155, 0, 0.22);
+  }
+
+  /* ============================================================
+     THEME 5 — JADE MATRIX
+     Deep emerald · forest · bioluminescent
+  ============================================================ */
+  [data-theme="jade"] {
+    color-scheme: dark;
+
+    --bg-base:      #00100a;
+    --bg-surface-1: #001a10;
+    --bg-surface-2: #002418;
+    --bg-surface-3: #003020;
+
+    --border-theme:        rgba(52, 211, 153, 0.12);
+    --border-theme-strong: rgba(52, 211, 153, 0.28);
+
+    --text-primary:   #e8fdf5;
+    --text-secondary: rgba(52, 211, 153, 0.82);
+    --text-muted:     rgba(52, 211, 153, 0.44);
+
+    --accent-primary:   #059669;
+    --accent-secondary: #34d399;
+    --accent-glow:      rgba(5, 150, 105, 0.45);
+    --accent-gradient:  linear-gradient(135deg, #059669, #34d399);
+
+    --verdict-benign:        #34d399;
+    --verdict-benign-bg:     rgba(52, 211, 153, 0.14);
+    --verdict-malicious:     #f87171;
+    --verdict-malicious-bg:  rgba(248, 113, 113, 0.22);
+    --verdict-unknown:       #5c8a72;
+    --verdict-unknown-bg:    rgba(20, 80, 50, 0.28);
+
+    --shadow-card: 0 4px 24px rgba(0, 16, 10, 0.85);
+    --shadow-glow: 0 0 40px rgba(5, 150, 105, 0.22);
+  }
+
+  /* ============================================================
+     THEME 6 — ARCTIC PROTOCOL (Light)
+     Ice blue · clean · daylight precision
+  ============================================================ */
+  [data-theme="arctic"] {
+    color-scheme: light;
+
+    --bg-base:      #e8f4f8;
+    --bg-surface-1: #f4fafc;
+    --bg-surface-2: #ffffff;
+    --bg-surface-3: #d4ecf4;
+
+    --border-theme:        rgba(2, 132, 199, 0.18);
+    --border-theme-strong: rgba(2, 132, 199, 0.38);
+
+    --text-primary:   #0c1a2e;
+    --text-secondary: rgba(2, 100, 160, 0.82);
+    --text-muted:     rgba(2, 100, 160, 0.52);
+
+    --accent-primary:   #0369a1;
+    --accent-secondary: #0ea5e9;
+    --accent-glow:      rgba(3, 105, 161, 0.22);
+    --accent-gradient:  linear-gradient(135deg, #0369a1, #0ea5e9);
+
+    --verdict-benign:        #0369a1;
+    --verdict-benign-bg:     rgba(3, 105, 161, 0.12);
+    --verdict-malicious:     #be123c;
+    --verdict-malicious-bg:  rgba(190, 18, 60, 0.10);
+    --verdict-unknown:       #475569;
+    --verdict-unknown-bg:    rgba(71, 85, 105, 0.12);
+
+    --shadow-card: 0 2px 16px rgba(2, 100, 160, 0.10);
+    --shadow-glow: 0 0 30px rgba(3, 105, 161, 0.12);
+  }
+
+  /* ============================================================
+     THEME 7 — SAND DUSK (Light Warm)
+     Warm wheat · parchment · golden hour
+  ============================================================ */
+  [data-theme="sand"] {
+    color-scheme: light;
+
+    --bg-base:      #f6efd9;
+    --bg-surface-1: #fdf8ed;
+    --bg-surface-2: #ffffff;
+    --bg-surface-3: #ede2c4;
+
+    --border-theme:        rgba(0, 95, 115, 0.16);
+    --border-theme-strong: rgba(0, 95, 115, 0.34);
+
+    --text-primary:   #001219;
+    --text-secondary: rgba(0, 95, 115, 0.85);
+    --text-muted:     rgba(0, 95, 115, 0.52);
+
+    --accent-primary:   #005f73;
+    --accent-secondary: #ca6702;
+    --accent-glow:      rgba(0, 95, 115, 0.18);
+    --accent-gradient:  linear-gradient(135deg, #005f73, #ca6702);
+
+    --verdict-benign:        #005f73;
+    --verdict-benign-bg:     rgba(0, 95, 115, 0.12);
+    --verdict-malicious:     #ae2012;
+    --verdict-malicious-bg:  rgba(174, 32, 18, 0.10);
+    --verdict-unknown:       #6b5a3e;
+    --verdict-unknown-bg:    rgba(107, 90, 62, 0.12);
+
+    --shadow-card: 0 2px 16px rgba(0, 18, 25, 0.08);
+    --shadow-glow: 0 0 30px rgba(0, 95, 115, 0.10);
+  }
+
+  /* ============================================================
+     BASE ELEMENT RESETS
+  ============================================================ */
+  * {
+    border-color: var(--border-theme);
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+
+    /* Smooth full-page theme transitions */
+    transition:
+      background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* All themed elements transition smoothly */
+  *, *::before, *::after {
+    transition-property: background-color, border-color, color, box-shadow, opacity;
+    transition-duration: 0.30s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Exclude animation-sensitive elements from blanket transition */
+  .animate-scanline, .animate-pulse, .animate-spin {
+    transition: none !important;
+  }
+
+  code, pre, .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--border-theme-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
+
+/* ── Animated Scanner Line ── */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  50%  { transform: translateY(1200%); }
+  100% { transform: translateY(-100%); }
+}
+.animate-scanline {
+  animation: scanline 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ── Ambient Background Glow ── */
+.bg-ambient-glow {
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 10%, var(--accent-glow), transparent 70%);
+}

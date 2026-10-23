@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="dark" data-accent="teal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreatForge — Static PE Malware Analyzer</title>
+    <meta name="description" content="ThreatForge evaluates Windows executables (.exe, .dll) using in-memory PE structural feature extraction and an EMBER 2018 Random Forest machine learning model." />
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Prevent theme flash script -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('threatforge_theme') || 'dark';
+        const accent = localStorage.getItem('threatforge_accent') || 'teal';
+        const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        document.documentElement.setAttribute('data-accent', accent);
+      })();
+    </script>
+  </head>
+  <body class="antialiased selection:bg-[#0a9396]/30 selection:text-[#94d2bd]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
