@@ -1,12 +1,20 @@
 {
   "name": "threatforge-workspace",
   "version": "1.0.0",
-  "description": "ThreatForge Static Malware Analyzer",
+  "description": "ThreatForge Static PE & Secure ZIP Archive Malware Analyzer",
   "scripts": {
+    "setup": "npm run install:all && npm run install:ml",
+    "install:all": "npm --prefix threatforge install && npm --prefix threatforge/server install && npm --prefix threatforge/client install",
+    "install:ml": "pip install -r threatforge/ml-service/requirements.txt",
     "dev": "npm --prefix threatforge run dev",
     "dev:ml": "npm --prefix threatforge run dev:ml",
     "dev:server": "npm --prefix threatforge run dev:server",
     "dev:client": "npm --prefix threatforge run dev:client",
-    "build": "npm --prefix threatforge run build"
+    "build": "npm --prefix threatforge run build",
+    "build:client": "npm --prefix threatforge run build:client",
+    "build:server": "npm --prefix threatforge run build:server",
+    "test": "npm run test:server && npm run test:ml",
+    "test:ml": "python -m pytest threatforge/ml-service/tests/test_archive_scanner.py -v",
+    "test:server": "npm --prefix threatforge/server test"
   }
 }

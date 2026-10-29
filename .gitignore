@@ -6,6 +6,7 @@
 # Node / JavaScript / TypeScript Dependencies
 # ------------------------------------------
 node_modules/
+**/node_modules/
 .pnp
 .pnp.js
 
@@ -13,9 +14,13 @@ node_modules/
 # Production Builds & Bundler Outputs
 # ------------------------------------------
 dist/
+**/dist/
 dist-ssr/
+**/dist-ssr/
 build/
+**/build/
 out/
+**/out/
 *.tsbuildinfo
 *.local
 
@@ -25,18 +30,23 @@ out/
 .env
 .env*.local
 *.env
+**/.env
+**/.env*.local
 !.env.example
 !*.env.example
+!**/.env.example
 
 # ------------------------------------------
 # Python & Testing Artifacts
 # ------------------------------------------
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 .pytest_cache/
+**/.pytest_cache/
 .coverage
 .coverage.*
 htmlcov/
@@ -48,6 +58,8 @@ venv/
 .venv/
 env/
 ENV/
+**/venv/
+**/.venv/
 
 # ------------------------------------------
 # Machine Learning Models & Large Artifacts
@@ -64,8 +76,12 @@ ENV/
 *.onnx
 malware_model.pkl
 
+# Allow bundled lightweight, clone-ready pre-trained model (<5MB)
+!threatforge/ml-service/model.pkl
+!model.pkl
+
 # ------------------------------------------
-# Large Datasets & Raw Features
+# Large Datasets & Raw Features (>50MB)
 # ------------------------------------------
 *.csv
 *.tsv
@@ -84,13 +100,18 @@ training_data.csv
 *.sqlite
 *.sqlite3
 data/
+**/data/
+**/data/*.db*
 
 # ------------------------------------------
 # Temporary Files, Uploads & Malware Samples
 # ------------------------------------------
 uploads/
+**/uploads/
 temp/
+**/temp/
 tmp/
+**/tmp/
 *.tmp
 *.temp
 
@@ -98,6 +119,7 @@ tmp/
 # Logs
 # ------------------------------------------
 logs/
+**/logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
